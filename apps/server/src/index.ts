@@ -9,6 +9,7 @@ async function init() {
   const PORT = process.env.PORT || 3002;
 
   socketService.io.attach(server);
+  socketService.initListeners();
 
   server.listen(PORT, () => {
     console.log(`server started at ${PORT}`);
